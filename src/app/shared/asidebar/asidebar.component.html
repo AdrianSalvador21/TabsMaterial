@@ -1,0 +1,49 @@
+<div class="row mr-0">
+    <!--BARRA LATERAL-->
+    <div class="col-2">
+        <ul class="list-group">
+            <li class="list-group-item border-0 cursor">
+                <p class="lead" data-toggle="collapse" data-target="#pagesCollapse">
+                    Pages
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </p>
+                <hr>
+                <ul class="list-group collapse" id="pagesCollapse">
+                    <li (click)="incluirTab(page)" class="list-group-item border-0 cursor" *ngFor="let page of pages2.pages">
+                        <a>{{page}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item border-0 cursor">
+                <p class="lead" data-toggle="collapse" data-target="#morepagesCollapse">
+
+                    More Pages
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </p>
+                <hr>
+                <ul class="list-group collapse" id="morepagesCollapse">
+                    <li (click)="incluirTab(page)" class="list-group-item border-0 cursor" *ngFor="let page of pages2.more">
+                        <a>{{page}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item border-0 cursor">
+                <p class="lead" data-toggle="collapse" data-target="#otherpagesCollapse">
+                    Other Pages
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </p>
+                <hr>
+                <ul class="list-group collapse" id="otherpagesCollapse">
+                    <li (click)="incluirTab(page)" class="list-group-item border-0 cursor" *ngFor="let page of pages2.other">
+                        <a>{{page}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!--SECCION DE TABS-->
+    <div class="col-10">
+        <app-tab></app-tab>
+    </div>
+</div>
